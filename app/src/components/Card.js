@@ -17,9 +17,10 @@ const Card = props => {
         <p>{props.card}</p>
       )} */}
       
-      {props.card && <div>{props.card}</div> }
+      {/* {props.card && <div>{props.card}</div> } */}
+      <br/>
       {props.card && <img src={props.card}/>}
-      {props.card && <p>{props.status}</p> }
+      {props.card && <p>{props.error}</p> }
     </div>
   );
 };

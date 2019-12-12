@@ -19,7 +19,7 @@ export const getCard = () => dispatch => {
       dispatch({ type: FETCH_CARD_SUCCESS, payload: res.data.message });
     })
     .then(res => {
-        console.log(res.data)
+        // console.log(res.data.status)
       dispatch({ type: FETCH_CARD_SUCCESS, payload: res.data.status });
     })
     .catch(err => {
