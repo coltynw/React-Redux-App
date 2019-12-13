@@ -10,13 +10,13 @@ export const FETCH_CARD_FAILURE = 'FETCH_CARD_FAILURE';
 export const getCard = () => dispatch => {
   dispatch({ type: FETCH_CARD_START });
   axios
-    // .get('http://shibe.online/api/shibes?count=[1-100]&urls=[true/false]&httpsUrls=[true/false]')
-     .get('https://dog.ceo/api/breeds/image/random')
+     .get('http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=false')
+    // .get('https://dog.ceo/api/breeds/image/random')
     // .get('https://cat-fact.herokuapp.com')
     // console.log(action.payload)
     .then(res => {
         console.log(res.data)
-      dispatch({ type: FETCH_CARD_SUCCESS, payload: res.data.message });
+      dispatch({ type: FETCH_CARD_SUCCESS, payload: res.data });
     })
     .then(res => {
         // console.log(res.data.status)
@@ -25,6 +25,9 @@ export const getCard = () => dispatch => {
     .catch(err => {
       dispatch({ type: FETCH_CARD_FAILURE, payload: err.response });
     });
+    // .catch(err => {
+    // return res.status(500).json({ type: 'error', message: err.message });
+    // });
 };
 
 // const getcard = () => {

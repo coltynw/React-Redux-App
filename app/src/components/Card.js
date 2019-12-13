@@ -7,8 +7,8 @@ import { getCard } from '../actions';
 const Card = props => {
   return (
     <div>
-      <h1>Dog fetcher</h1>
-      <button onClick={props.getCard}>Click button for Dog</button>
+      <h1>Shiba fetcher</h1>
+      <button onClick={props.getCard}>Click button for Doggo</button>
       {!props.card && !props.isFetching && <p>Dog will apear here</p>}
       {props.isFetching && (
         <Loader type="Puff" color="#00BFFF" height={100} width={100} />
@@ -19,8 +19,8 @@ const Card = props => {
       
       {/* {props.card && <div>{props.card}</div> } */}
       <br/>
-      {props.card && <img src={props.card}/>}
-      {props.card && <p>{props.error}</p> }
+      {props.card && <img src={props.card} alt='dog'/>}
+      {props.card && <p>{props.status}</p> }
     </div>
   );
 };

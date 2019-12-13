@@ -24,7 +24,7 @@ import {
           card: action.payload,
           isFetching: false,
           error: '',
-          status: action.payload.status
+        //   status: action.payload
         };
       case FETCH_CARD_FAILURE:
         return {
